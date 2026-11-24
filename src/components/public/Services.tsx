@@ -83,7 +83,7 @@ const servicesList: ServiceItem[] = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-neutral-950 relative border-t border-neutral-900">
+    <section id="services" className="py-16 sm:py-24 bg-neutral-950 relative border-t border-neutral-900 overflow-hidden">
       {/* Background Accent glow */}
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-red-600/5 rounded-full blur-[120px] pointer-events-none" />
 
@@ -150,7 +150,7 @@ export default function Services() {
                 </div>
 
                 {/* Bottom CTA */}
-                <div className="mt-8 pt-5 border-t border-neutral-800/80 flex items-center justify-between">
+                <div className="mt-8 pt-5 border-t border-neutral-800/80 flex flex-wrap items-center justify-between gap-3">
                   <span className="text-xs text-neutral-400 uppercase tracking-wider font-semibold">
                     Custom Packages Available
                   </span>

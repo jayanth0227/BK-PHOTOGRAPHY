@@ -136,12 +136,12 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar & Admin Link */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-4">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-center sm:text-left text-xs text-neutral-500 gap-4">
           <p>
             &copy; {currentYear} Bharath Kumar Photography. All Rights Reserved.
           </p>
 
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
             <span>Designed with precision in Red, White &amp; Black</span>
             <Link
               href="/admin/login"

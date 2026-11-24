@@ -44,7 +44,7 @@ export default function Portfolio() {
       : items.filter((item) => item.category.toLowerCase() === selectedCategory.toLowerCase());
 
   return (
-    <section id="portfolio" className="py-24 bg-black relative border-t border-neutral-900">
+    <section id="portfolio" className="py-16 sm:py-24 bg-black relative border-t border-neutral-900 overflow-hidden">
       {/* Background radial glow */}
       <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-red-600/10 rounded-full blur-[140px] pointer-events-none" />
 

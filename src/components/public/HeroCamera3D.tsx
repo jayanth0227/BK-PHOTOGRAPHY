@@ -26,7 +26,7 @@ export default function HeroCamera3D({ scrollYProgress }: HeroCamera3DProps) {
         scale,
         perspective: 1200,
       }}
-      className="absolute right-0 sm:right-2 lg:right-6 xl:right-12 bottom-0 w-[340px] sm:w-[500px] lg:w-[620px] h-[340px] sm:h-[500px] lg:h-[620px] pointer-events-none select-none z-10 flex items-center justify-center"
+      className="absolute left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-2 lg:right-6 xl:right-12 bottom-0 w-[260px] sm:w-[340px] md:w-[500px] lg:w-[620px] h-[260px] sm:h-[340px] md:h-[500px] lg:h-[620px] pointer-events-none select-none z-10 flex items-center justify-center"
     >
       <motion.div
         style={{
@@ -105,13 +105,13 @@ export default function HeroCamera3D({ scrollYProgress }: HeroCamera3DProps) {
               style={{
                 transform: `rotate(${angle}deg) translate(28%, -15%)`,
               }}
-              className="absolute w-20 h-10 bg-gradient-to-r from-neutral-900 via-neutral-950 to-neutral-900 border-l border-red-600/60 shadow-lg rounded-tl-full opacity-90"
+              className="absolute w-[56%] h-[28%] bg-gradient-to-r from-neutral-900 via-neutral-950 to-neutral-900 border-l border-red-600/60 shadow-lg rounded-tl-full opacity-90"
             />
           ))}
 
           {/* Central Aperture Pupil with Glowing Red Core */}
-          <div className="relative w-14 h-14 rounded-full bg-black border-2 border-red-500/80 shadow-[0_0_30px_rgba(239,68,68,0.9)] flex items-center justify-center">
-            <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-red-600 to-red-400 animate-pulse shadow-[0_0_15px_rgba(239,68,68,1)]" />
+          <div className="relative w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-black border-2 border-red-500/80 shadow-[0_0_30px_rgba(239,68,68,0.9)] flex items-center justify-center">
+            <div className="w-4 h-4 sm:w-6 sm:h-6 rounded-full bg-gradient-to-tr from-red-600 to-red-400 animate-pulse shadow-[0_0_15px_rgba(239,68,68,1)]" />
           </div>
         </motion.div>
 

@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, CalendarCheck, MessageCircle } from "lucide-react";
-import CursiveSignature from "@/components/ui/CursiveSignature";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -34,10 +34,20 @@ export default function Navbar() {
             : "bg-neutral-950/75 backdrop-blur-lg border border-neutral-800/80 shadow-xl py-2.5 px-4 sm:px-6"
         } flex items-center justify-between hover:border-red-900/50`}
       >
-        {/* Cursive Signature Brand Logo */}
-        <div className="flex items-center pl-1 sm:pl-2">
-          <CursiveSignature size="sm" />
-        </div>
+        {/* Brand Logo Image */}
+        <Link
+          href="/"
+          className="flex items-center pl-1 sm:pl-2 focus:outline-none transition-transform hover:scale-[1.03]"
+        >
+          <Image
+            src="/navbar-logo.png"
+            alt="Bharath Kumar Photography"
+            width={446}
+            height={173}
+            priority
+            className="h-8 sm:h-10 lg:h-11 w-auto object-contain"
+          />
+        </Link>
 
         {/* Center Desktop Navigation Menu */}
         <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">
@@ -53,7 +63,7 @@ export default function Navbar() {
         </nav>
 
         {/* Right CTA Actions */}
-        <div className="hidden sm:flex items-center space-x-3">
+        <div className="hidden md:flex items-center space-x-3">
           <a
             href="https://wa.me/919876543210?text=Hi%20Bharath%20Kumar%20Photography%2C%20I%20would%20like%20to%20inquire%20about%20a%20photoshoot!"
             target="_blank"
@@ -73,8 +83,8 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile Hamburger Button */}
-        <div className="flex items-center sm:hidden">
+        {/* Mobile & Tablet Hamburger Button */}
+        <div className="flex items-center md:hidden">
           <button
             type="button"
             suppressHydrationWarning

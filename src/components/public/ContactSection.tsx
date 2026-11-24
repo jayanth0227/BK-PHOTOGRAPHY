@@ -66,7 +66,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-neutral-950 relative border-t border-neutral-900">
+    <section id="contact" className="py-16 sm:py-24 bg-neutral-950 relative border-t border-neutral-900 overflow-hidden">
       {/* Background Glow */}
       <div className="absolute top-1/2 right-10 w-96 h-96 bg-red-600/10 rounded-full blur-[140px] pointer-events-none" />
 
@@ -171,7 +171,7 @@ export default function ContactSection() {
 
           {/* Booking Inquiry Form */}
           <div className="lg:col-span-7">
-            <div className="p-8 sm:p-10 rounded-3xl bg-neutral-900/70 border border-neutral-800 backdrop-blur-md shadow-2xl relative">
+            <div className="p-5 sm:p-8 lg:p-10 rounded-3xl bg-neutral-900/70 border border-neutral-800 backdrop-blur-md shadow-2xl relative">
               <h3 className="text-2xl font-serif text-white font-medium">
                 Reserve Your Date
               </h3>

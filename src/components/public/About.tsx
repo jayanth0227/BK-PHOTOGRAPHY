@@ -7,7 +7,7 @@ import BrandLogo from "@/components/ui/BrandLogo";
 
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-neutral-950 relative border-t border-neutral-900 overflow-hidden">
+    <section id="about" className="py-16 sm:py-24 bg-neutral-950 relative border-t border-neutral-900 overflow-hidden">
       {/* Background ambient lighting */}
       <div className="absolute top-1/3 left-0 w-80 h-80 bg-red-600/5 rounded-full blur-[120px] pointer-events-none" />
 
@@ -20,7 +20,7 @@ export default function About() {
               <div className="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-red-600/20 via-transparent to-red-600/10 blur-xl opacity-75" />
 
               <div className="relative rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-900 shadow-2xl">
-                <div className="relative h-[480px] sm:h-[540px] w-full">
+                <div className="relative h-[360px] sm:h-[480px] lg:h-[540px] w-full">
                   <Image
                     src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?auto=format&fit=crop&w=1000&q=80"
                     alt="Bharath Kumar behind the lens"

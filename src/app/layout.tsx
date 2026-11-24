@@ -41,6 +41,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark scroll-smooth" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700;1,800&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body
         className="min-h-screen bg-[#080808] text-white flex flex-col antialiased selection:bg-red-600 selection:text-white"
         suppressHydrationWarning
