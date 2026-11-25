@@ -959,7 +959,7 @@ export default function SonyFX3Illustration({
         transformStyle: "preserve-3d",
         perspective: 1200,
       }}
-      className="relative w-[270px] sm:w-[440px] lg:w-[620px] xl:w-[680px] h-[228px] sm:h-[372px] lg:h-[525px] xl:h-[575px] select-none pointer-events-none"
+      className="relative w-[290px] min-[390px]:w-[345px] sm:w-[440px] lg:w-[530px] xl:w-[660px] h-[245px] min-[390px]:h-[291px] sm:h-[372px] lg:h-[448px] xl:h-[558px] select-none pointer-events-none"
     >
       {/* Ambient Studio Shadow & Crimson Rim Backlight */}
       <div

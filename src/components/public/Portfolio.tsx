@@ -44,13 +44,13 @@ export default function Portfolio() {
       : items.filter((item) => item.category.toLowerCase() === selectedCategory.toLowerCase());
 
   return (
-    <section id="portfolio" className="py-16 sm:py-24 bg-black relative border-t border-neutral-900 overflow-hidden">
+    <section id="portfolio" className="scroll-mt-20 sm:scroll-mt-24 py-14 sm:py-24 bg-black relative border-t border-neutral-900 overflow-hidden">
       {/* Background radial glow */}
-      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-red-600/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/4 right-0 w-64 sm:w-[500px] h-64 sm:h-[500px] bg-red-600/10 rounded-full blur-[110px] sm:blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-950/40 border border-red-800/40 text-red-400 text-xs font-semibold uppercase tracking-widest mb-3">
             <Sparkles className="w-3.5 h-3.5 text-red-500" />
             Our Visual Gallery
@@ -58,14 +58,14 @@ export default function Portfolio() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-white tracking-tight">
             Moments Frozen In <span className="font-serif italic text-red-500">Perfection</span>
           </h2>
-          <p className="mt-4 text-neutral-400 text-base font-light">
+          <p className="mt-4 text-neutral-400 text-sm sm:text-base font-light">
             Every frame tells a chapter of authentic love, laughter, and heritage. Browse our
             curated portfolio below.
           </p>
 
           {/* Category Filter Tabs */}
           <div
-            className="flex flex-wrap items-center justify-center gap-2 mt-8"
+            className="flex flex-wrap items-center justify-center gap-2 mt-6 sm:mt-8"
             suppressHydrationWarning
           >
             {CATEGORIES.map((cat) => {
@@ -76,7 +76,7 @@ export default function Portfolio() {
                   type="button"
                   suppressHydrationWarning
                   onClick={() => setSelectedCategory(cat)}
-                  className={`px-5 py-2 rounded-full text-xs sm:text-sm font-medium tracking-wide transition-all duration-300 ${
+                  className={`px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium tracking-wide transition-all duration-300 ${
                     active
                       ? "bg-red-600 text-white shadow-lg shadow-red-900/50 scale-105"
                       : "bg-neutral-900/80 text-neutral-400 hover:text-white hover:bg-neutral-800 border border-neutral-800"
@@ -90,12 +90,12 @@ export default function Portfolio() {
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {filteredItems.map((item, idx) => (
             <div
               key={item._id || idx}
               onClick={() => setActiveLightboxItem(item)}
-              className="group relative h-80 sm:h-96 rounded-2xl overflow-hidden cursor-pointer bg-neutral-950 border border-neutral-800/80 hover:border-red-600/60 transition-all duration-500 hover:shadow-2xl hover:shadow-red-950/40"
+              className="group relative h-72 sm:h-96 rounded-2xl overflow-hidden cursor-pointer bg-neutral-950 border border-neutral-800/80 hover:border-red-600/60 transition-all duration-500 hover:shadow-2xl hover:shadow-red-950/40"
             >
               <Image
                 src={item.imageUrl}

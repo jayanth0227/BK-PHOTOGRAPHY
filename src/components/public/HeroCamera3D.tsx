@@ -8,12 +8,13 @@ interface HeroCamera3DProps {
 }
 
 export default function HeroCamera3D({ scrollYProgress }: HeroCamera3DProps) {
-  // 3D Rotations tied to mouse scroll progression
-  const rotateY = useTransform(scrollYProgress, [0.05, 0.85], [-35, 25]);
-  const rotateX = useTransform(scrollYProgress, [0.05, 0.85], [20, -10]);
-  const rotateZ = useTransform(scrollYProgress, [0.05, 0.85], [-15, 140]);
-  const scale = useTransform(scrollYProgress, [0.05, 0.85], [0.65, 1.2]);
-  const opacity = useTransform(scrollYProgress, [0.05, 0.25, 0.85], [0, 0.95, 0.9]);
+  // Hidden at scrollYProgress = 0 on all viewports; reveals with 3D parallax & rotation on scroll
+  const rotateY = useTransform(scrollYProgress, [0.05, 0.82], [-35, 25]);
+  const rotateX = useTransform(scrollYProgress, [0.05, 0.82], [20, -10]);
+  const rotateZ = useTransform(scrollYProgress, [0.05, 0.82], [-18, 140]);
+  const y = useTransform(scrollYProgress, [0.05, 0.72], ["26%", "0%"]);
+  const scale = useTransform(scrollYProgress, [0.05, 0.78], [0.65, 1.16]);
+  const opacity = useTransform(scrollYProgress, [0.05, 0.26, 0.85], [0, 0.95, 0.9]);
 
   // Aperture blades counter-rotation (creates mechanical iris effect)
   const irisRotation = useTransform(scrollYProgress, [0.05, 0.85], [0, 240]);
@@ -22,11 +23,12 @@ export default function HeroCamera3D({ scrollYProgress }: HeroCamera3DProps) {
   return (
     <motion.div
       style={{
+        y,
         opacity,
         scale,
         perspective: 1200,
       }}
-      className="absolute left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-2 lg:right-6 xl:right-12 bottom-0 w-[260px] sm:w-[340px] md:w-[500px] lg:w-[620px] h-[260px] sm:h-[340px] md:h-[500px] lg:h-[620px] pointer-events-none select-none z-10 flex items-center justify-center"
+      className="absolute left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-2 lg:right-6 xl:right-12 bottom-[4vh] sm:bottom-[3vh] md:bottom-0 w-[330px] h-[330px] sm:w-[420px] sm:h-[420px] md:w-[480px] md:h-[480px] lg:w-[620px] lg:h-[620px] pointer-events-none select-none z-10 flex items-center justify-center"
     >
       <motion.div
         style={{

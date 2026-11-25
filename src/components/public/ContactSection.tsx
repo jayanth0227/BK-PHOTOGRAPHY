@@ -66,14 +66,14 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-16 sm:py-24 bg-neutral-950 relative border-t border-neutral-900 overflow-hidden">
+    <section id="contact" className="scroll-mt-20 sm:scroll-mt-24 py-14 sm:py-24 bg-neutral-950 relative border-t border-neutral-900 overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute top-1/2 right-10 w-96 h-96 bg-red-600/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 right-10 w-64 sm:w-96 h-64 sm:h-96 bg-red-600/10 rounded-full blur-[110px] sm:blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16">
           {/* Contact Details & Info */}
-          <div className="lg:col-span-5 flex flex-col justify-between">
+          <div className="lg:col-span-5 flex flex-col justify-between min-w-0">
             <div>
               <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-950/40 border border-red-800/40 text-red-400 text-xs font-semibold uppercase tracking-widest mb-3">
                 Get In Touch
@@ -82,22 +82,22 @@ export default function ContactSection() {
                 Let&apos;s Create Something{" "}
                 <span className="font-serif italic text-red-500">Unforgettable</span>
               </h2>
-              <p className="mt-4 text-neutral-300 text-base font-light leading-relaxed">
+              <p className="mt-4 text-neutral-300 text-sm sm:text-base font-light leading-relaxed">
                 We take a limited number of weddings and events each season to ensure every film and
                 photograph receives our undivided attention and artistry.
               </p>
 
               {/* Direct Info List */}
-              <div className="mt-8 space-y-5">
+              <div className="mt-6 sm:mt-8 space-y-4 sm:space-y-5">
                 <div className="flex items-start gap-4 p-4 rounded-xl bg-neutral-900/60 border border-neutral-800/80">
-                  <Phone className="w-5 h-5 text-red-500 mt-0.5" />
-                  <div>
+                  <Phone className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
+                  <div className="min-w-0">
                     <h4 className="text-xs uppercase tracking-wider text-neutral-400 font-semibold">
                       Direct Call & Inquiries
                     </h4>
                     <a
                       href="tel:+919876543210"
-                      className="text-base font-medium text-white hover:text-red-400 transition-colors"
+                      className="text-base font-medium text-white hover:text-red-400 transition-colors break-words"
                     >
                       +91 98765 43210
                     </a>
@@ -105,14 +105,14 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex items-start gap-4 p-4 rounded-xl bg-neutral-900/60 border border-neutral-800/80">
-                  <Mail className="w-5 h-5 text-red-500 mt-0.5" />
-                  <div>
+                  <Mail className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
+                  <div className="min-w-0">
                     <h4 className="text-xs uppercase tracking-wider text-neutral-400 font-semibold">
                       Email Us
                     </h4>
                     <a
                       href="mailto:contact@bkphotography.com"
-                      className="text-base font-medium text-white hover:text-red-400 transition-colors"
+                      className="text-base font-medium text-white hover:text-red-400 transition-colors break-all sm:break-words"
                     >
                       contact@bkphotography.com
                     </a>
@@ -120,8 +120,8 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex items-start gap-4 p-4 rounded-xl bg-neutral-900/60 border border-neutral-800/80">
-                  <MapPin className="w-5 h-5 text-red-500 mt-0.5" />
-                  <div>
+                  <MapPin className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
+                  <div className="min-w-0">
                     <h4 className="text-xs uppercase tracking-wider text-neutral-400 font-semibold">
                       Studio Location
                     </h4>
@@ -135,8 +135,8 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex items-start gap-4 p-4 rounded-xl bg-neutral-900/60 border border-neutral-800/80">
-                  <Clock className="w-5 h-5 text-red-500 mt-0.5" />
-                  <div>
+                  <Clock className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
+                  <div className="min-w-0">
                     <h4 className="text-xs uppercase tracking-wider text-neutral-400 font-semibold">
                       Studio Hours
                     </h4>

@@ -83,13 +83,13 @@ const servicesList: ServiceItem[] = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-16 sm:py-24 bg-neutral-950 relative border-t border-neutral-900 overflow-hidden">
+    <section id="services" className="scroll-mt-20 sm:scroll-mt-24 py-14 sm:py-24 bg-neutral-950 relative border-t border-neutral-900 overflow-hidden">
       {/* Background Accent glow */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-red-600/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-64 sm:w-96 h-64 sm:h-96 bg-red-600/5 rounded-full blur-[100px] sm:blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-950/40 border border-red-800/40 text-red-400 text-xs font-semibold uppercase tracking-widest mb-3">
             Services We Offer
           </div>
@@ -97,14 +97,14 @@ export default function Services() {
             Tailored Experiences For Every{" "}
             <span className="font-serif italic text-red-500">Celebration</span>
           </h2>
-          <p className="mt-4 text-neutral-400 text-base font-light">
+          <p className="mt-4 text-neutral-400 text-sm sm:text-base font-light">
             Each occasion is unique. We blend documentary candids with artistic fine-art framing
             to immortalize your greatest milestones.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {servicesList.map((service) => (
             <div
               key={service.id}

@@ -61,32 +61,32 @@ export default function Lightbox({
       <button
         onClick={onClose}
         aria-label="Close fullscreen preview"
-        className="absolute top-5 right-5 z-50 p-2.5 rounded-full bg-neutral-900/80 text-white hover:text-red-500 hover:bg-neutral-800 border border-neutral-700 transition"
+        className="absolute top-3 right-3 sm:top-5 sm:right-5 z-50 p-2 sm:p-2.5 rounded-full bg-neutral-900/80 text-white hover:text-red-500 hover:bg-neutral-800 border border-neutral-700 transition"
       >
-        <X className="w-6 h-6" />
+        <X className="w-5 h-5 sm:w-6 sm:h-6" />
       </button>
 
       {/* Prev button */}
       <button
         onClick={handlePrev}
         aria-label="Previous image"
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-50 p-3 rounded-full bg-black/60 text-white hover:text-red-500 hover:bg-neutral-900 border border-neutral-800 transition"
+        className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-50 p-2 sm:p-3 rounded-full bg-black/60 text-white hover:text-red-500 hover:bg-neutral-900 border border-neutral-800 transition"
       >
-        <ChevronLeft className="w-6 h-6" />
+        <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
       </button>
 
       {/* Next button */}
       <button
         onClick={handleNext}
         aria-label="Next image"
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-50 p-3 rounded-full bg-black/60 text-white hover:text-red-500 hover:bg-neutral-900 border border-neutral-800 transition"
+        className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-50 p-2 sm:p-3 rounded-full bg-black/60 text-white hover:text-red-500 hover:bg-neutral-900 border border-neutral-800 transition"
       >
-        <ChevronRight className="w-6 h-6" />
+        <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
       </button>
 
       {/* Image container & Caption */}
       <div className="relative max-w-5xl w-full h-full flex flex-col items-center justify-center">
-        <div className="relative w-full h-[70vh] sm:h-[75vh] flex items-center justify-center">
+        <div className="relative w-full h-[52vh] sm:h-[75vh] flex items-center justify-center">
           <Image
             src={item.imageUrl}
             alt={item.title}

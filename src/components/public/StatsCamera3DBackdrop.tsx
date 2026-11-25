@@ -11,12 +11,12 @@ export default function StatsCamera3DBackdrop({
   scrollYProgress,
 }: StatsCamera3DBackdropProps) {
   // 3D rotations & spatial glide rotating strictly OPPOSITE to the foreground camera illustration
-  const x = useTransform(scrollYProgress, [0, 0.75], ["35%", "0%"]);
+  const x = useTransform(scrollYProgress, [0, 0.62], ["30%", "0%"]);
   const rotateY = useTransform(scrollYProgress, [0, 0.85], [34, 10]);
   const rotateX = useTransform(scrollYProgress, [0, 0.85], [-16, 10]);
   const rotateZ = useTransform(scrollYProgress, [0, 0.85], [-55, 145]);
-  const scale = useTransform(scrollYProgress, [0, 0.75], [0.72, 1.08]);
-  const opacity = useTransform(scrollYProgress, [0, 0.25, 0.85], [0, 0.9, 0.95]);
+  const scale = useTransform(scrollYProgress, [0, 0.65], [0.75, 1.08]);
+  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.85], [0.1, 0.9, 0.95]);
 
   // Synchronized clockwise inner optical rings & iris (all rotating opposite to the counter-clockwise camera)
   const middleRingRotate = useTransform(scrollYProgress, [0, 0.85], [0, 90]);
@@ -36,7 +36,7 @@ export default function StatsCamera3DBackdrop({
       {/* Volumetric Lens Light Cone projecting leftwards along the camera's aim */}
       <motion.div
         style={{ scale: ringPulseScale }}
-        className="absolute -left-24 top-1/2 -translate-y-1/2 w-[520px] h-[260px] -rotate-12 bg-gradient-to-l from-red-600/20 via-red-700/10 to-transparent blur-3xl rounded-full pointer-events-none"
+        className="absolute -left-10 sm:-left-24 top-1/2 -translate-y-1/2 w-[300px] sm:w-[520px] h-[160px] sm:h-[260px] -rotate-12 bg-gradient-to-l from-red-600/20 via-red-700/10 to-transparent blur-3xl rounded-full pointer-events-none"
       />
 
       <motion.div
@@ -46,7 +46,7 @@ export default function StatsCamera3DBackdrop({
           rotateZ,
           transformStyle: "preserve-3d",
         }}
-        className="relative w-[240px] sm:w-[400px] lg:w-[540px] h-[240px] sm:h-[400px] lg:h-[540px] flex items-center justify-center"
+        className="relative w-[270px] min-[390px]:w-[310px] sm:w-[410px] lg:w-[490px] xl:w-[540px] h-[270px] min-[390px]:h-[310px] sm:h-[410px] lg:h-[490px] xl:h-[540px] flex items-center justify-center"
       >
         {/* Layer 1 (-50px Z): 3D Camera Sensor Perspective Grid */}
         <div

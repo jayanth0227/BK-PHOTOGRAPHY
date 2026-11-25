@@ -44,25 +44,25 @@ const testimonials: Testimonial[] = [
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-16 sm:py-24 bg-black relative border-t border-neutral-900 overflow-hidden">
+    <section id="testimonials" className="scroll-mt-20 sm:scroll-mt-24 py-14 sm:py-24 bg-black relative border-t border-neutral-900 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-950/40 border border-red-800/40 text-red-400 text-xs font-semibold uppercase tracking-widest mb-3">
             Client Words
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-white tracking-tight">
             Loved By <span className="font-serif italic text-red-500">Families & Couples</span>
           </h2>
-          <p className="mt-4 text-neutral-400 text-base font-light">
+          <p className="mt-4 text-neutral-400 text-sm sm:text-base font-light">
             Nothing brings us more joy than the smiles and heartwarming feedback of the people we photograph.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           {testimonials.map((t) => (
             <div
               key={t.id}
-              className="relative p-8 rounded-2xl bg-neutral-900/50 border border-neutral-800 hover:border-red-600/50 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-red-950/20"
+              className="relative p-6 sm:p-8 rounded-2xl bg-neutral-900/50 border border-neutral-800 hover:border-red-600/50 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-red-950/20"
             >
               <Quote className="w-8 h-8 text-red-600/40 mb-4" />
 
